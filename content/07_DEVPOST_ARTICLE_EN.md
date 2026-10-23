@@ -40,3 +40,5 @@ A mathematical property becomes much easier to appreciate when people can use it
 ## What's next
 
 We are excited to extend OrbitSum with richer budget templates, additional supported calculations, and more ways to explore the evidence behind each result. The next chapter builds on the same idea: useful AI planning, encrypted computation, and a clear result in your hands.
+
+[Watch demo](https://www.youtube.com/watch?v=o2TgQ8hyMZs) · [Explore project](https://devpost.com/software/orbitsum)

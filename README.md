@@ -2,6 +2,8 @@
 
 **Shared insight. Private inputs.** OrbitSum turns student club budgets into a shared planning number with browser-owned Paillier encryption, a hosted AI planner and a C/OpenSSL encrypted arithmetic worker.
 
+[Watch demo](https://www.youtube.com/watch?v=o2TgQ8hyMZs) · [Explore project](https://devpost.com/software/orbitsum)
+
 Four synthetic budgets — **SGD 1,240.00, 1,860.00, 920.00 and 1,580.00** — produce a **SGD 5,600.00 total**, **SGD 1,400.00 average**, or **SGD 600.00 North-minus-South comparison**. Edit the amounts and generate a new verified result.
 
 ## Run locally
