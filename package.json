@@ -1,0 +1,1 @@
+{"name":"orbitsum","private":true,"version":"0.1.0","type":"module","scripts":{"start":"python3 src/server.py","test":"node tests/crypto.test.mjs && python3 -m unittest discover -s tests -v","native":"python3 scripts/build_native.py"}}

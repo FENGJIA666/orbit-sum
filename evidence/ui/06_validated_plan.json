@@ -1,0 +1,22 @@
+{
+  "operation": "total",
+  "terms": [
+    {
+      "id": "site-1",
+      "weight": 1
+    },
+    {
+      "id": "site-2",
+      "weight": 1
+    },
+    {
+      "id": "site-3",
+      "weight": 1
+    },
+    {
+      "id": "site-4",
+      "weight": 1
+    }
+  ],
+  "divisor": 1
+}

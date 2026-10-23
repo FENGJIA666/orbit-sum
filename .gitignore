@@ -1,0 +1,16 @@
+.env*
+__pycache__/
+*.pyc
+.DS_Store
+evidence/private/
+node_modules/
+build/
+.local/
+internal/
+output/
+CHECKPOINT.md
+DELIVERY.md
+evidence/anti_review.json
+evidence/content-review.json
+evidence/manager_acceptance.json
+evidence/delivery_manifest.json

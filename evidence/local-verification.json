@@ -1,0 +1,57 @@
+{
+  "recorded_at": "2026-10-23T16:58:57.185641+00:00",
+  "scope": "Local crypto, native evaluator, input boundary and loopback HTTP checks",
+  "live_api": false,
+  "passed": true,
+  "checks": [
+    {
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+        "scripts/build_native.py"
+      ],
+      "exit_code": 0,
+      "output": "Built native Paillier evaluator: build/aggregate"
+    },
+    {
+      "command": [
+        "node",
+        "tests/crypto.test.mjs"
+      ],
+      "exit_code": 0,
+      "output": "PASS 2048-bit browser key\nPASS exact decimal money conversion\nPASS reject unsafe decimal input\nPASS round-trip accepted endpoints\nPASS ciphertexts are independently randomized\nPASS homomorphic sum and negative difference\nPASS public scalar multiplication\nPASS reject invalid plaintext and group elements\n{\"suite\":\"browser-paillier-and-money\",\"passed\":8,\"key_bits\":2048}"
+    },
+    {
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_32_records_have_exact_bounded_total (test_anti_review.AntiManagerReview.test_32_records_have_exact_bounded_total) ... ok\ntest_aggregate_is_rerandomized (test_anti_review.AntiManagerReview.test_aggregate_is_rerandomized) ... ok\ntest_browser_generated_paillier_is_randomized (test_anti_review.AntiManagerReview.test_browser_generated_paillier_is_randomized) ... ok\ntest_browser_range_endpoints_roundtrip (test_anti_review.AntiManagerReview.test_browser_range_endpoints_roundtrip) ... ok\ntest_displayed_envelope_matches_provider_user_message (test_anti_review.AntiManagerReview.test_displayed_envelope_matches_provider_user_message) ... ok\ntest_loopback_http_boundary (test_anti_review.AntiManagerReview.test_loopback_http_boundary) ... ok\ntest_malformed_json_types_are_input_errors (test_anti_review.AntiManagerReview.test_malformed_json_types_are_input_errors) ... ok\ntest_native_rejects_malformed_group_elements (test_anti_review.AntiManagerReview.test_native_rejects_malformed_group_elements) ... ok\ntest_native_signed_cancellation (test_anti_review.AntiManagerReview.test_native_signed_cancellation) ... ok\ntest_negative_difference (test_anti_review.AntiManagerReview.test_negative_difference) ... ok\ntest_planner_rejects_unapproved_terms (test_anti_review.AntiManagerReview.test_planner_rejects_unapproved_terms) ... ok\ntest_private_parameters_and_extra_fields_rejected (test_anti_review.AntiManagerReview.test_private_parameters_and_extra_fields_rejected) ... ok\ntest_provider_payload_contains_public_fields_only (test_anti_review.AntiManagerReview.test_provider_payload_contains_public_fields_only) ... ok\ntest_total_average_and_difference (test_anti_review.AntiManagerReview.test_total_average_and_difference) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 5.543s\n\nOK"
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "web/app.js"
+      ],
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "sha256": {
+    "src/aggregate.c": "15124ba5f735e91c9250d3f4410701780ec1fbcc36841baf4ef3ae64a13bd43a",
+    "src/engine.py": "a1ee5f2c9e767765a99e739bb314238a8338affca093e5586867de1c76c9483f",
+    "src/server.py": "b67b94896706ae547a2ed22bd3a5162c416ff1915291c997e6460cd51e83a7c6",
+    "tests/crypto.test.mjs": "35c4c779d04490f12b04a21c4d5ff1955f7775366a606cc5931acd3bc9e224fd",
+    "tests/test_anti_review.py": "b599ff40bb33d8bcf22836300a026d5711c1d3712917ad714472d21e75b84f03",
+    "web/app.js": "bdfed982a7fd0e17e7087dd6dfbbe5a87157c9dc0d0fe5417e22f04bf621fb08",
+    "web/index.html": "4220f8dc2854d92b9c631066f9369f6066ba888f5c6194aeaf30a6d6b69bd36d",
+    "web/paillier.js": "232a2c5d566a062e27e72a7f3ab195885b4d4fe1ef8d5489d81512b3bcd64cb8",
+    "web/style.css": "1303450e41ca89b3893e6dc360de911e0fc7f68ddc248350d8ab51fa8bb951df"
+  }
+}
